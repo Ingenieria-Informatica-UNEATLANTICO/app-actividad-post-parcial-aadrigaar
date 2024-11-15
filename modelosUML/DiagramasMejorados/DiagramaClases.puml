@@ -1,0 +1,63 @@
+@startuml
+title Diagrama de Clases - Sistema de Transporte Público
+
+class Persona {
+}
+
+class Conductor extends Persona {
+}
+
+class Pasajero extends Persona {
+}
+
+class Vehiculo {
+}
+
+class Ruta {
+}
+
+class Horario {
+}
+
+class Parada {
+}
+
+class Servicio {
+}
+
+class Incidencia {
+}
+
+class Flota {
+}
+
+class Tarifa {
+}
+
+class Abono {
+}
+
+class MetodoPago {
+}
+
+class Viaje {
+}
+
+Ruta *-- Parada : incluye
+Ruta --> Horario : tiene
+Conductor --> Vehiculo : conduce
+Conductor --> Ruta : asignado
+Conductor --> Incidencia : reporta
+Vehiculo --> Incidencia : sufre
+Servicio --> Ruta : cubre
+Servicio --> Vehiculo : utiliza
+Servicio --> Conductor : opera
+Flota *-- Vehiculo : administra
+Pasajero --> Vehiculo : viaja_en
+Pasajero --> Tarifa : paga
+MetodoPago --> Tarifa
+Abono --> MetodoPago
+Incidencia --> Servicio : afecta
+Viaje --> Pasajero : contiene
+Viaje --> Ruta : sigue
+@enduml

@@ -1,0 +1,104 @@
+@startuml
+title Diagrama de Objetos
+
+object Horario {
+    horaInicio = "9:00"
+    horaFin = "21:00"
+}
+
+object Ruta1 {
+    ID = 1
+}
+
+object Parada1 {
+    ubicacion = "Ayuntamiento"
+}
+
+object Parada2 {
+    ubicacion = "Catedral"
+}
+
+object ServicioDiario {
+    ID = 1
+}
+
+object Conductor1 {
+    ID = 1234
+    nombre = "Alex"
+}
+
+object Conductor2 {
+    ID = 4321
+    nombre = "Pablo"
+}
+
+object Vehiculo1 {
+    tipo = "Bus"
+    capacidad = 50
+    ID = 1
+}
+
+object Vehiculo2 {
+    tipo = "Bus"
+    capacidad = 40
+    ID = 2
+}
+
+object Incidencia1 {
+    tipo = "Averiado"
+    estado = "Activo"
+    urgencia = "Mínima"
+}
+
+object Pasajero1 {
+    asiento = 7C
+    nombre = "Mario"
+}
+
+object Pasajero2 {
+    asiento = 8B
+    nombre = "Luz"
+}
+
+object Flota {
+    empresa: UC 
+}
+
+object Tarifa1 {
+    tipo = "Diurna1"
+}
+
+object Tarifa2 {
+    tipo = "Diurna2"
+}
+
+object Abono1 {
+    metodo = "Tarjeta"
+    cantidad = "5viajes"
+}
+
+object Abono2 {
+    metodo = "Tarjeta"
+    cantidad = "2viajes"
+}
+
+
+Ruta1 --> Horario : tiene
+Ruta1 --> Parada1 : tiene
+Ruta1 --> Parada2 : tiene
+ServicioDiario --> Ruta1 : ofrece
+Conductor1 --> Ruta1 : sigue
+Conductor2 --> Ruta1 : sigue
+Conductor1 --> Vehiculo1 : conduce
+Conductor2 --> Vehiculo2 : conduce
+Conductor2 --> Incidencia1 : reporta
+Vehiculo2 --> Incidencia1 : sufre
+Pasajero1 --> Vehiculo1 : usa 
+Flota --> Vehiculo1
+Flota --> Vehiculo2
+Pasajero1 --> Tarifa1
+Abono1 --> Tarifa1 : se emplea
+Pasajero2 --> Vehiculo2 : usa
+Pasajero2 --> Tarifa2
+Abono2 --> Tarifa2 : se emplea
+@enduml

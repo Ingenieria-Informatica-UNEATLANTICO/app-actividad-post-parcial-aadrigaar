@@ -1,3 +1,23 @@
+# Examen Adrián García Arranz
+
+## Examen Parcial
+- **[Examen Parcial PDF](/documents/ParcialSoftware.pdf)**
+
+## Diagramas Examen
+- **[Diagrama de Estados Examen](/images/DiagramaEstados.svg)**
+- **[Diagrama de Clases Examen](/images/DiagramaClases.svg)**
+- **[Diagrama de Objetos Examen](/images/DiagramaObjetos.svg)**
+
+## Diagramas Nuevos
+- **[Glosario](/documents/Glosario.md)**
+- **[Diagrama de Estados Nuevo](/images/DiagramasMejorados/DiagramaEstados.svg)**
+- **[Diagrama de Clases Nuevo](/images/DiagramasMejorados/DiagramaClases.svg)**
+- **[Diagrama de Objetos Nuevo](/images/DiagramasMejorados/DiagramaObjetos.svg)**
+
+
+
+
+[![Review Assignment Due Date](https://classroom.github.com/assets/deadline-readme-button-22041afd0340ce965d47ae6ef1cefeee28c7c493a6346c4f15d667ab976d596c.svg)](https://classroom.github.com/a/GYdZjuJz)
 # Repo plantilla para exámenes [PRG*x*|EDA*x*|IDSW*x*]@gII.uneatlantico
 
 *Este documento es una guía para la realización y entrega de las evaluaciones en las asignaturas PRGx, EDAx e IDSWx del Grado en Ingeniería Informática. Detalla la estructura del repositorio de entrega, los artefactos requeridos y los criterios de evaluación.*
