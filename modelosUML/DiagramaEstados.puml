@@ -1,0 +1,16 @@
+@startuml
+title Diagrama de Estados
+
+[*] --> Inactivo
+
+Inactivo --> EnServicio : Iniciar Servicio
+EnServicio --> EnRuta : Asignar Ruta
+EnRuta --> Parada : Llegar a Parada
+Parada --> EnRuta : Salir de Parada
+EnRuta --> GestionIncidencia : Reportar Incidencia
+GestionIncidencia --> EnServicio : Incidencia Resuelta
+EnRuta --> Mantenimiento : Avería Grave
+Mantenimiento --> Inactivo : Reparación Completa
+EnRuta --> Finalizado : Fin de Ruta
+Finalizado --> Inactivo : Regresar a la Base
+@enduml
