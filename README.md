@@ -1,4 +1,18 @@
-**[Examen Parcial PDF](/documents/ParcialSoftware.pdf)**
+# Examen Adrián García Arranz
+
+## Examen Parcial
+- **[Examen Parcial PDF](/documents/ParcialSoftware.pdf)**
+
+## Diagramas Examen
+- **[Diagrama de Estados Examen](/images/DiagramaEstados.svg)**
+- **[Diagrama de Clases Examen](/images/DiagramaClases.svg)**
+- **[Diagrama de Objetos Examen](/images/DiagramaObjetos.svg)**
+
+## Diagramas Nuevos
+- **[Glosario](/documents/Glosario.md)**
+- **[Diagrama de Estados Nuevo](/images/DiagramasMejorados/DiagramaEstados.svg)**
+- **[Diagrama de Clases Nuevo](/images/DiagramasMejorados/DiagramaClases.svg)**
+- **[Diagrama de Objetos Nuevo](/images/DiagramasMejorados/DiagramaObjetos.svg)**
 
 
 
