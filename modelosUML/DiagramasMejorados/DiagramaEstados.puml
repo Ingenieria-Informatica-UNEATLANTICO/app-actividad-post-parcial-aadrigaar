@@ -1,0 +1,22 @@
+@startuml
+title Diagrama de Estados - Sistema de Transporte Público
+
+[*] --> Inactivo : Sistema Iniciado
+
+Inactivo --> EnServicio : Activar Servicio Público
+EnServicio --> EnRuta : Asignar Ruta y Vehículo
+EnRuta --> Parada : Llegar a Parada
+Parada --> EnRuta : Salir de Parada
+
+EnRuta --> GestionIncidencia : Reportar Incidencia (Ej. Retraso)
+GestionIncidencia --> EnRuta : Incidencia Resuelta
+GestionIncidencia --> Mantenimiento : Necesita Reparación
+
+EnRuta --> Mantenimiento : Avería Grave
+Mantenimiento --> EnServicio : Reparación Completada
+Mantenimiento --> Inactivo : Servicio Cancelado
+
+EnRuta --> Finalizado : Finalizar Ruta (Ej. Última Parada)
+Finalizado --> Inactivo : Desactivar Servicio Público
+Finalizado --> EnServicio : Preparar Nueva Ruta
+@enduml
