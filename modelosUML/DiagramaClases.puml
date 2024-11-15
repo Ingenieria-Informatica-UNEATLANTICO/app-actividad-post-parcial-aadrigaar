@@ -1,0 +1,53 @@
+@startuml
+class Horario {
+}
+
+class Ruta {
+}
+
+class Servicio {
+}
+
+class Conductor {
+}
+
+class Vehiculo {
+}
+
+class Incidencia {
+}
+
+class Pasajero {
+}
+
+class Persona {
+}
+
+class Tarifa {
+}
+
+class Abono {
+}
+
+class Flota {
+}
+
+class MetodoPago{
+}
+
+Ruta --> Horario : tiene
+Conductor --> Ruta : sigue
+Conductor --> Incidencia : reporta
+Conductor --> Vehiculo : conduce
+Vehiculo --> Incidencia : sufre
+Vehiculo --> Flota
+Servicio --> Ruta : ofrece
+Servicio --> Flota : ofrece
+Conductor --> Persona
+Pasajero --> Persona
+Pasajero --> Vehiculo : usa
+Incidencia --> Pasajero : afecta
+Pasajero --> Tarifa : paga
+MetodoPago --> Tarifa
+Abono --> MetodoPago
+@enduml
