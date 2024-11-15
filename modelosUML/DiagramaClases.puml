@@ -1,4 +1,6 @@
 @startuml
+title Diagrama de Clases
+
 class Horario {
 }
 
@@ -40,7 +42,7 @@ Conductor --> Ruta : sigue
 Conductor --> Incidencia : reporta
 Conductor --> Vehiculo : conduce
 Vehiculo --> Incidencia : sufre
-Vehiculo --> Flota
+Flota *-- Vehiculo
 Servicio --> Ruta : ofrece
 Servicio --> Flota : ofrece
 Conductor --> Persona
