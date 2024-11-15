@@ -1,0 +1,105 @@
+@startuml
+title Diagrama de Objetos - Sistema de Transporte Público
+
+object HorarioLaboral {
+    horaInicio = "6:00"
+    horaFin = "22:00"
+    diasActivos = "Lunes a Sábado"
+}
+
+object RutaInterurbana {
+    ID = 201
+    nombre = "Ruta Interurbana"
+    distancia = 35.0
+    numeroParadas = 10
+}
+
+object ParadaTerminal {
+    ubicacion = "Estación Central"
+    nombre = "Terminal Principal"
+    tiempoEstancia = 15
+}
+
+object ServicioNocturno {
+    ID = 2
+    tipo = "Nocturno"
+    frecuencia = "Cada 30 minutos"
+}
+
+object ConductorJuan {
+    ID = 5678
+    nombre = "Juan"
+    licencia = "B9876"
+    añosExperiencia = 6
+    telefono = "912345678"
+}
+
+object AutobusXL {
+    tipo = "Autobús"
+    capacidad = 70
+    estado = "Operativo"
+    matricula = "XYZ-1234"
+}
+
+object MinibusExpress {
+    tipo = "Minibús"
+    capacidad = 20
+    estado = "Mantenimiento"
+    matricula = "ABC-5678"
+}
+
+object IncidenciaFrenos {
+    tipo = "Mecánica"
+    estado = "Pendiente"
+    urgencia = "Alta"
+    descripcion = "Problema en frenos"
+}
+
+object PasajeroFrecuente {
+    nombre = "Sofía"
+    asiento = "7A"
+    dni = "98765432Q"
+}
+
+object PasajeroOcasional {
+    nombre = "Carlos"
+    asiento = "3C"
+    dni = "12398745P"
+}
+
+object TarifaReducida {
+    tipo = "Reducida"
+    precio = 1.20
+    categoria = "Estudiante"
+}
+
+object AbonoAnual {
+    tipo = "Anual"
+    duracion = "12 meses"
+    costo = 250.00
+}
+
+object FlotaUrbana {
+    empresa = "Transporte Urbano SA"
+    numeroVehiculos = 100
+}
+
+object ViajeInterurbano {
+    id = 3001
+    fecha = "2024-11-15"
+}
+
+RutaInterurbana --> HorarioLaboral : asignado
+RutaInterurbana --> ParadaTerminal : incluye
+ServicioNocturno --> RutaInterurbana : cubre
+ConductorJuan --> RutaInterurbana : asignado
+ConductorJuan --> AutobusXL : conduce
+ConductorJuan --> IncidenciaFrenos : reporta
+PasajeroFrecuente --> AutobusXL : viaja_en
+PasajeroFrecuente --> TarifaReducida : paga
+PasajeroOcasional --> AutobusXL : usa
+FlotaUrbana --> AutobusXL
+ViajeInterurbano --> PasajeroFrecuente : incluye
+ViajeInterurbano --> RutaInterurbana : sigue
+PasajeroFrecuente --> AbonoAnual : compra
+@enduml
