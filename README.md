@@ -1,4 +1,4 @@
-**[Examen Parcial PDF](/app-actividad-post-parcial-aadrigaar/documents/Parcial Software I.pdf)**
+**[Examen Parcial PDF](/documents/ParcialSoftware.pdf)**
 
 
 
